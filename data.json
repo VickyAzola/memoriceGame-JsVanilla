@@ -1,0 +1,90 @@
+{
+    "imagenes": [
+      {
+        "id": 1,
+        "nombre": "Angular",
+        "url": "assets/img/angular-svgrepo-com.svg"
+      },
+      {
+        "id": 2,
+        "nombre": "Bootstrap",
+        "url": "assets/img/bootstrap-svgrepo-com.svg"
+      },
+      {
+        "id": 3,
+        "nombre": "CSS3",
+        "url": "assets/img/css.svg"
+      },
+      {
+        "id": 4,
+        "nombre": "HTML5",
+        "url": "assets/img/html.svg"
+      },
+      {
+        "id": 5,
+        "nombre": "JavaScript",
+        "url": "assets/img/javascript-svgrepo-com.svg"
+      },
+      {
+        "id": 6,
+        "nombre": "React",
+        "url": "assets/img/react-svgrepo-com.svg"
+      },
+      {
+        "id": 7,
+        "nombre": "SASS",
+        "url": "assets/img/sass-svgrepo-com.svg"
+      },
+      {
+        "id": 8,
+        "nombre": "Tailwind CSS",
+        "url": "assets/img/tailwind-css-svgrepo-com.svg"
+      },
+      {
+        "id": 9,
+        "nombre": "Vite",
+        "url": "assets/img/vite-svgrepo-com.svg"
+      },
+      {
+        "id": 10,
+        "nombre": "Vue",
+        "url": "assets/img/vue-svgrepo-com.svg"
+      },
+      {
+        "id": 11,
+        "nombre": "Git",
+        "url": "assets/img/git-svgrepo-com.svg"
+      },
+      {
+        "id": 12,
+        "nombre": "Github",
+        "url": "assets/img/github-octocat-svgrepo-com.svg"
+      },
+      {
+        "id": 13,
+        "nombre": "Java",
+        "url": "assets/img/java-svgrepo-com.svg"
+      },
+      {
+        "id": 14,
+        "nombre": "Jquery",
+        "url": "assets/img/jquery-svgrepo-com.svg"
+      },
+      {
+        "id": 15,
+        "nombre": "Php",
+        "url": "assets/img/php-svgrepo-com.svg"
+      },
+      {
+        "id": 16,
+        "nombre": "Python",
+        "url": "assets/img/python-svgrepo-com.svg"
+      },
+      {
+        "id": 17,
+        "nombre": "Sql",
+        "url": "assets/img/sql-database-generic-svgrepo-com.svg"
+      }
+    ]
+  }
+  

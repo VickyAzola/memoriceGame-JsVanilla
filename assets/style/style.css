@@ -1,0 +1,158 @@
+:root {
+    --bg: rgb(14, 14, 48);
+    --title: rgb(216, 226, 233);
+    --sectionBg: rgb(255, 255, 255);
+    --button: rgb(113, 113, 216);
+    --cardBg: rgb(146, 236, 232);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    padding: 1rem;
+}
+
+header {
+    color: var(--title);
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.inicioJuego {
+    text-align: center;
+    display: grid;
+    place-content: center;
+    background-color: var(--sectionBg);
+    padding: 1.5rem 1rem;
+    max-width: 30rem;
+    margin-inline: auto;
+    border-radius: .5rem;
+}
+
+.inicioJuego img {
+    margin-inline: auto;
+    margin-top: 2rem;
+}
+
+.inicioJuego form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    column-gap: .5rem;
+    width: 100%;
+}
+
+.inicioJuego form input {
+    padding: .5rem;
+    height: 2.5rem;
+    border-radius: .3rem;
+    border: 1px solid rgb(155, 155, 155);
+    margin-bottom: 1rem;
+}
+
+.inicioJuego form button {
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    border: none;
+    background-color: var(--button);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.inicioJuego form button:hover {
+    opacity: 0.8;
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 50rem;
+    margin-inline: auto;
+}
+
+.cards-wrapper .card {
+    background-color: var(--cardBg);
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 9rem;
+}
+
+.cards-wrapper .card:hover {
+    opacity: .8;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.cards-wrapper .card img {
+    width: 100px;
+    height: 100px;
+}
+
+.modalResultado {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--sectionBg);
+    padding: 2rem 1rem;
+    max-width: 30rem;
+    margin-inline: auto;
+    border-radius: .5rem;
+}
+
+.modalResultado h2 {
+    margin-bottom: 1rem;
+}
+
+.modalResultado button {
+    padding: 1rem;
+    width: 70%;
+    cursor: pointer;
+    border-radius: .3rem;
+    border: none;
+    background-color: var(--button);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.modalResultado button:hover {
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .cards-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: .5rem;
+    }
+    .cards-wrapper .card {
+        height: 6rem;
+    }
+    .cards-wrapper .card img {
+        width: 60px;
+        height: 60px;
+    }
+}

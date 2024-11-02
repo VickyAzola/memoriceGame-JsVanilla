@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Memorice</title>
+  </head>
+  <body>
+    <header>
+      <h1>Memorice</h1>
+    </header>
+    <main>
+      <section id="inicioJuego" class="inicioJuego">
+        <h2>¿Con cúantas cartas quieres jugar?</h2>
+        <img src="assets/img/card.svg" width="150px" />
+        <form onsubmit="cantidadCartas(event)">
+          <input
+            type="number"
+            min="2"
+            max="10"
+            id="num-of-cards"
+            required
+            placeholder="Elige un número entre 2 y 10"
+          />
+          <button>Jugar</button>
+        </form>
+      </section>
+
+      <section id="container" class="hidden">
+        <div id="cards-wrapper" class="cards-wrapper"></div>
+      </section>
+
+      <section id="modal-resultado" class="hidden">
+        <div class="modalResultado">
+          <h2>¡Lo Lograste!</h2>
+          <img src="assets/img/Winners-rafiki.svg" width="300px" />
+          <button onclick="nuevoJuego()">Nuevo juego</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
