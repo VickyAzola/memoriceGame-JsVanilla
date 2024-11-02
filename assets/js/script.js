@@ -1,29 +1,33 @@
 const container = document.getElementById("container");
-const cardsWrapper = document.getElementById("cards-wrapper")
-const modalResultado = document.getElementById("modal-resultado")
-const inicioJuego = document.getElementById("inicioJuego")
+const cardsWrapper = document.getElementById("cards-wrapper");
+const modalResultado = document.getElementById("modal-resultado");
+const inicioJuego = document.getElementById("inicioJuego");
+const allBtn = document.querySelectorAll(".card");
+const timeBox = document.getElementById("time");
 
 //ingresado por el usuario, es para definir la cantidad de cartas en fetchData
-let numberOfCards 
+let numberOfCards;
+
+//timepo que se muestran las cartas
+let time;
 
 function cantidadCartas(event) {
   event.preventDefault();
 
   //obtener el numero de cartas que elige el usuario
-  numberOfCards = document.getElementById("num-of-cards").value
+  numberOfCards = document.getElementById("num-of-cards").value;
 
   //esconder la seccion de inicio
-  inicioJuego.classList.add("hidden")
+  inicioJuego.classList.add("hidden");
 
   //mostrar el memorice
-  container.classList.remove("hidden")
+  container.classList.remove("hidden");
 
   //llamar a la funcion fetchData para que traiga las cartas
   fetchData();
 }
 
 async function fetchData() {
-
   try {
     //trear la data del json
     const response = await fetch("./data.json");
@@ -57,10 +61,45 @@ async function fetchData() {
     shuffledArray.forEach((item, index) => {
       cardsWrapper.innerHTML += `
         <button onclick="cardSelected(${index})" class="card" id="card-${index}"">   
-            <img class="hidden" src="${item.url}" alt="${item.nombre}" />
+            <img class="" src="${item.url}" alt="${item.nombre}" />
         </button>
         `;
     });
+
+    //define los segundos que se muestran las cartas dependiendo de la cantidad
+    if (numberOfCards <= 4) {
+      time = 3;
+    } else if (numberOfCards >= 5 && numberOfCards <= 6) {
+      time = 4;
+    } else if (numberOfCards >= 7 && numberOfCards <= 8) {
+      time = 5;
+    } else {
+      time = 6;
+    }
+
+    //estilo inicial de las cartas, se quita luego de que pasan los segundos de variable time
+    shuffledArray.forEach((_, index) => {
+      const btnCard = document.getElementById(`card-${index}`);
+      const cardImg = document.querySelector(`#card-${index} img`);
+
+      setTimeout(() => {
+        cardImg.classList.add("hidden");
+        btnCard.style.backgroundColor = "rgb(146, 236, 232)";
+        allBtn.forEach((btn) => {
+          btn.disabled = true;
+        });
+      }, time * 1000);
+    });
+
+    //contador en reversa
+    setInterval(() => {
+      if (time > 0) {
+        time--;
+        timeBox.textContent = time;
+      } else if (time == 0) {
+        timeBox.textContent = "";
+      }
+    }, 1000);
 
     return shuffledArray;
   } catch (error) {
@@ -108,9 +147,9 @@ function cardSelected(index) {
       });
 
       //  Desbloquear solo las cartas que no están en correctPairs
-      allBtn.forEach((btn) => { 
+      allBtn.forEach((btn) => {
         //btn.firstElementChild.alt: corresponde al nombre de cada card
-//!correctPairs.includes(...) si el nombre de la carta NO esta en correctPairs se cumple el if
+        //!correctPairs.includes(...) si el nombre de la carta NO esta en correctPairs se cumple el if
         if (!correctPairs.includes(btn.firstElementChild.alt)) {
           btn.disabled = false; //se desbloquean los btn que no estan en correctPairs
         }
@@ -135,7 +174,7 @@ function cardSelected(index) {
             btn.disabled = false;
           }
         });
-
+        
       }, 1000);
 
       selectedName = [];
@@ -143,26 +182,28 @@ function cardSelected(index) {
   }
 
   //si el array de correctos es igual al numero ingresado por el usuario * 2
-  if(correctPairs.length === numberOfCards * 2) {
+  if (correctPairs.length === numberOfCards * 2) {
     //pasado 1s se cambian los estilos de la seccion container y modal
     setTimeout(() => {
-      container.classList.remove("show")
-      container.classList.add("hidden")
+      container.classList.remove("show");
+      container.classList.add("hidden");
 
-      modalResultado.classList.add("show")
-    }, 1000)
+      modalResultado.classList.add("show");
+    }, 1000);
   }
 }
 
 function nuevoJuego() {
   correctPairs = []; //limpiar el array
-  cardsWrapper.innerHTML = '' //limpiar el html
-  document.getElementById("num-of-cards").value = '' //liampiar el input
+  cardsWrapper.innerHTML = ""; //limpiar el html
+  document.getElementById("num-of-cards").value = ""; //liampiar el input
 
   //modificar el estilo de seccion modal
-  modalResultado.classList.remove("show")
-  modalResultado.classList.add("hidden")
+  modalResultado.classList.remove("show");
+  modalResultado.classList.add("hidden");
 
   //escoonde la seccion inicio
-  inicioJuego.classList.remove("hidden")
+  inicioJuego.classList.remove("hidden");
 }
+
+//ver si puedo agregar animaciones a las cartas con css

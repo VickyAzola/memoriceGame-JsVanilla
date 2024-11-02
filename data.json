@@ -3,12 +3,12 @@
       {
         "id": 1,
         "nombre": "Angular",
-        "url": "assets/img/angular-svgrepo-com.svg"
+        "url": "assets/img/angular.svg"
       },
       {
         "id": 2,
         "nombre": "Bootstrap",
-        "url": "assets/img/bootstrap-svgrepo-com.svg"
+        "url": "assets/img/bootstrap.svg"
       },
       {
         "id": 3,
@@ -23,67 +23,67 @@
       {
         "id": 5,
         "nombre": "JavaScript",
-        "url": "assets/img/javascript-svgrepo-com.svg"
+        "url": "assets/img/javascript.svg"
       },
       {
         "id": 6,
         "nombre": "React",
-        "url": "assets/img/react-svgrepo-com.svg"
+        "url": "assets/img/react.svg"
       },
       {
         "id": 7,
         "nombre": "SASS",
-        "url": "assets/img/sass-svgrepo-com.svg"
+        "url": "assets/img/sass.svg"
       },
       {
         "id": 8,
         "nombre": "Tailwind CSS",
-        "url": "assets/img/tailwind-css-svgrepo-com.svg"
+        "url": "assets/img/tailwind-css.svg"
       },
       {
         "id": 9,
         "nombre": "Vite",
-        "url": "assets/img/vite-svgrepo-com.svg"
+        "url": "assets/img/vite.svg"
       },
       {
         "id": 10,
         "nombre": "Vue",
-        "url": "assets/img/vue-svgrepo-com.svg"
+        "url": "assets/img/vue.svg"
       },
       {
         "id": 11,
         "nombre": "Git",
-        "url": "assets/img/git-svgrepo-com.svg"
+        "url": "assets/img/git.svg"
       },
       {
         "id": 12,
         "nombre": "Github",
-        "url": "assets/img/github-octocat-svgrepo-com.svg"
+        "url": "assets/img/github.svg"
       },
       {
         "id": 13,
         "nombre": "Java",
-        "url": "assets/img/java-svgrepo-com.svg"
+        "url": "assets/img/java.svg"
       },
       {
         "id": 14,
         "nombre": "Jquery",
-        "url": "assets/img/jquery-svgrepo-com.svg"
+        "url": "assets/img/jquery.svg"
       },
       {
         "id": 15,
-        "nombre": "Php",
-        "url": "assets/img/php-svgrepo-com.svg"
+        "nombre": "PHP",
+        "url": "assets/img/php.svg"
       },
       {
         "id": 16,
         "nombre": "Python",
-        "url": "assets/img/python-svgrepo-com.svg"
+        "url": "assets/img/python.svg"
       },
       {
         "id": 17,
         "nombre": "Sql",
-        "url": "assets/img/sql-database-generic-svgrepo-com.svg"
+        "url": "assets/img/sql.svg"
       }
     ]
   }

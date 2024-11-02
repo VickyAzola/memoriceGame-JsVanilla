@@ -21,7 +21,11 @@ header {
     color: var(--title);
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+header #time {
+    margin-top: 1rem;
 }
 
 .inicioJuego {
@@ -81,7 +85,7 @@ header {
 }
 
 .cards-wrapper .card {
-    background-color: var(--cardBg);
+    background-color: white;
     padding: 1rem;
     border-radius: .5rem;
     display: flex;
